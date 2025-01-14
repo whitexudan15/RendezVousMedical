@@ -15,6 +15,16 @@ public class RendezVous {
 
     }
 
+    /**
+     * Constructs a RendezVous object with the specified details.
+     *
+     * @param dateProgrammation The date of the appointment scheduling
+     * @param dateRDV The date of the appointment
+     * @param etat The state of the appointment
+     * @param creneau The time slot of the appointment
+     * @param patient The patient associated with the appointment
+     * @param medecin The doctor associated with the appointment
+     */
     public RendezVous(Date dateProgrammation, Date dateRDV, String etat, Creneau creneau, Patient patient, Medecin medecin) {
         this.dateProgrammation = dateProgrammation;
         this.dateRDV = dateRDV;
@@ -72,17 +82,28 @@ public class RendezVous {
         this.medecin = medecin;
     }
 
+    /**
+     * Returns a string representation of the RendezVous object.
+     *
+     * @return A string containing the date of programming, date of the appointment,
+     * time slot, state, patient, and doctor associated with the appointment.
+     */
     @Override
     public String toString() {
         return "RendezVous {\ndateProgrammation => " + dateProgrammation + "\n" + 
-               "dateRDV => " + dateRDV + "\n" +
-               "creneau => " + creneau + "\n" +
-               "etat => " + etat + "\n" +
-               "patient => " + patient + "\n" +
-               "medecin => " + medecin + "\n" +
-               "}";
+            "dateRDV => " + dateRDV + "\n" +
+            "creneau => " + creneau + "\n" +
+            "etat => " + etat + "\n" +
+            "patient => " + patient + "\n" +
+            "medecin => " + medecin + "\n" +
+            "}";
     }
 
+    /**
+     * Generates a hash code value for the object based on its fields.
+     *
+     * @return A hash code value for this object
+     */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -96,6 +117,12 @@ public class RendezVous {
         return result;
     }
 
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     *
+     * @param obj the reference object with which to compare
+     * @return true if this object is the same as the obj argument; false otherwise
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

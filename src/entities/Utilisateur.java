@@ -11,6 +11,16 @@ public abstract class Utilisateur {
     public Utilisateur() {
     }
 
+    /**
+     * Constructs a new Utilisateur (User) object with the specified attributes.
+     *
+     * @param nom The last name of the user
+     * @param prenom The first name of the user
+     * @param email The email address of the user
+     * @param password The password of the user
+     * @param role The role of the user (e.g., admin, user)
+     * @param age The age of the user
+     */
     public Utilisateur(String nom, String prenom, String email, String password, String role, int age) {
         this.nom = nom;
         this.prenom = prenom;

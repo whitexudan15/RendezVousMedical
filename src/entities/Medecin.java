@@ -17,7 +17,6 @@ public class Medecin extends Utilisateur {
     
     }
 
-
     /**
      * Represents a medical professional with specific attributes.
      *
