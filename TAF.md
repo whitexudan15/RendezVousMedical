@@ -100,3 +100,119 @@
         - _patient (Patient.id)
         - _médécin (Médécin.id)
     ]
+
+
+## Organisation MVC
+
+    src/
+    ├── controller/
+    │   ├── SecretaireController.java
+    │   ├── MedecinController.java
+    │   ├── RendezVousController.java
+    ├── model/
+    │   ├── entities/
+    │   │   ├── Creneau.java
+    │   │   ├── Medecin.java
+    │   │   ├── Patient.java
+    │   │   ├── RendezVous.java
+    │   │   ├── Secretaire.java
+    │   │   ├── Specialite.java
+    │   │   ├── Utilisateur.java
+    │   ├── dao/
+    │   │   ├── CreneauDAO.java
+    │   │   ├── MedecinDAO.java
+    │   │   ├── PatientDAO.java
+    │   │   ├── RendezVousDAO.java
+    │   │   ├── SecretaireDAO.java
+    │   │   ├── SpecialiteDAO.java
+    │   │   ├── UtilisateurDAO.java
+    ├── service/
+    │   ├── RendezVousService.java
+    │   ├── UtilisateurService.java
+    ├── view/
+    │   ├── MedecinView.java
+    │   ├── SecretaireView.java
+    │   ├── RendezVousView.java
+    ├── Test.java
+
+## Organisation DAO
+
+    src/
+    │   ├── dao/
+    │   │   ├── CreneauDAO.java
+    │   │   ├── MedecinDAO.java
+    │   │   ├── PatientDAO.java
+    │   │   ├── RendezVousDAO.java
+    │   │   ├── SecretaireDAO.java
+    │   │   ├── SpecialiteDAO.java
+    │   │   ├── UtilisateurDAO.java
+    │   ├── entities/
+    │   │   ├── Creneau.java
+    │   │   ├── Medecin.java
+    │   │   ├── Patient.java
+    │   │   ├── RendezVous.java
+    │   │   ├── Secretaire.java
+    │   │   ├── Specialite.java
+    │   │   ├── Utilisateur.java
+    │   ├── service/
+    │   │   ├── MedecinService.java
+    │   │   ├── PatientService.java
+    │   │   ├── RendezVousService.java
+    │   │   ├── SecretaireService.java
+    │   │   ├── NotificationService.java
+    │   │   ├── SpecialiteService.java
+    │   │   ├── UtilisateurService.java
+    │   ├── view/
+    │   │   ├── MedecinView.java
+    │   │   ├── PatientView.java
+    │   │   ├── RendezVousView.java
+    │   │   ├── LoginView.java
+    │   │   ├── DashboardView.java
+    │   │   ├── SpecialiteView.java
+    │   │   ├── SecretaireView.java
+    │   ├── Test.java
+
+
+## Organisation MVC + DAO
+
+src/
+│   ├── dao/                      # Accès aux données
+│   │   ├── CreneauDAO.java
+│   │   ├── MedecinDAO.java
+│   │   ├── PatientDAO.java
+│   │   ├── RendezVousDAO.java
+│   │   ├── SecretaireDAO.java
+│   │   ├── SpecialiteDAO.java
+│   │   ├── UtilisateurDAO.java
+│   ├── model/                    # Modèle : Entités et logique métier
+│   │   ├── Creneau.java
+│   │   ├── Medecin.java
+│   │   ├── Patient.java
+│   │   ├── RendezVous.java
+│   │   ├── Secretaire.java
+│   │   ├── Specialite.java
+│   │   ├── Utilisateur.java
+│   ├── service/                  # Services : Logique métier utilisant DAO
+│   │   ├── MedecinService.java
+│   │   ├── PatientService.java
+│   │   ├── RendezVousService.java
+│   │   ├── SecretaireService.java
+│   │   ├── NotificationService.java
+│   │   ├── SpecialiteService.java
+│   │   ├── UtilisateurService.java
+│   ├── controller/               # Contrôleurs : Interactions entre la Vue et le Modèle
+│   │   ├── MedecinController.java
+│   │   ├── PatientController.java
+│   │   ├── RendezVousController.java
+│   │   ├── SecretaireController.java
+│   │   ├── SpecialiteController.java
+│   │   ├── UtilisateurController.java
+│   ├── view/                     # Vues : Interface utilisateur
+│   │   ├── MedecinView.java
+│   │   ├── PatientView.java
+│   │   ├── RendezVousView.java
+│   │   ├── LoginView.java
+│   │   ├── DashboardView.java
+│   │   ├── SpecialiteView.java
+│   │   ├── SecretaireView.java
+│   ├── Test.java                  # Test de l'application
